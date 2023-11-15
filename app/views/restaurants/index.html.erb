@@ -1,0 +1,12 @@
+<div class="container border border-dark">
+  <p style="color: green"><%= notice %></p>
+  <h1>Restaurants List</h1>
+  <div id="restaurants">
+    <% @restaurants.each do |restaurant| %>
+      <p class="m-4">
+        <%= link_to restaurant.name, restaurant %>
+      </p>
+    <% end %>
+  </div>
+
+  <p class="btn btn-warning"><%= link_to "New restaurant", new_restaurant_path, class:"text-decoration-none" %></p>
